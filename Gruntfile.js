@@ -200,6 +200,15 @@ module.exports = function (grunt) {
         src: ['fonts/*'],
         dest: '../_dummy_frontend/css'
       },
+      docs: {
+        expand: true,
+        cwd: './dist',
+        src: [
+          '{css,js}/*.min.*',
+          '{css}/*.map',
+          'fonts/*'
+        ],
+      },
       loopfirst: {
         expand: true,
         cwd: 'dist/',
