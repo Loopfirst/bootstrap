@@ -355,8 +355,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // Docs HTML validation task
-  // grunt.registerTask('validate-html', ['jekyll', 'validation']);
-  grunt.registerTask('validate-html', ['validation']);
+  grunt.registerTask('validate-html', ['validation']);  //twbs ['jekyll', 'validation']
 
   // Test task.
   var testSubtasks = [];
@@ -382,9 +381,6 @@ module.exports = function (grunt) {
 
   // CSS distribution task.
   grunt.registerTask('dist-css', ['less', 'cssmin', 'csscomb', 'usebanner']);
-
-  // Fonts distribution task.
-  grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Docs distribution task.
   grunt.registerTask('dist-docs', ['copy:docs']);
